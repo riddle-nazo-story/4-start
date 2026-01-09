@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>とあるホテルの秘密</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{box-sizing:border-box}
+
+html,body{
+  margin:0;
+  padding:0;
+  background:#070707;
+  color:#e6e6e6;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;
+}
+
+/* ===== 全体 ===== */
+.wrapper{
+  display:grid;
+  grid-template-columns:420px 1fr;
+  min-height:100vh;
+}
+
+/* ===== 左：テキストカード ===== */
+.info{
+  padding:32px 24px;
+  background:#0e0e0e;
+  border-right:1px solid #1f1f1f;
+}
+
+.info h1{
+  font-size:24px;
+  letter-spacing:.18em;
+  margin:0 0 8px;
+}
+
+.meta{
+  font-size:12px;
+  color:#999;
+  margin-bottom:28px;
+}
+
+.section{
+  margin-bottom:28px;
+}
+
+.section h2{
+  font-size:13px;
+  letter-spacing:.2em;
+  color:#bbb;
+  margin-bottom:10px;
+}
+
+.section p,
+.section li{
+  font-size:13px;
+  line-height:1.9;
+  color:#d0d0d0;
+}
+
+.section ul{
+  margin:0;
+  padding-left:18px;
+}
+
+/* ===== パッケージ ===== */
+.package{
+  margin-top:36px;
+  padding-top:20px;
+  border-top:1px solid #2a2a2a;
+}
+
+.package img{
+  width:100%;
+  max-width:320px;
+  display:block;
+  margin:0 auto 14px;
+  background:#111;
+  border:1px solid #333;
+}
+
+.package .url{
+  font-size:12px;
+  color:#aaa;
+  word-break:break-all;
+  text-align:center;
+  margin-top:10px;
+}
+
+/* ★ 購入ボタン ★ */
+.buy-btn{
+  display:block;
+  width:100%;
+  max-width:260px;
+  margin:16px auto 0;
+  padding:12px 0;
+  text-align:center;
+  font-size:13px;
+  letter-spacing:.2em;
+  color:#ddd;
+  text-decoration:none;
+  border:1px solid #555;
+  background:#111;
+  transition:.3s;
+}
+
+.buy-btn:hover{
+  background:#1a1a1a;
+  border-color:#888;
+}
+
+/* ===== 右：映像 ===== */
+.stage{
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.video-box{
+  position:relative;
+  background:#000;
+  border:1px solid #2a2a2a;
+}
+
+.video-box::after{
+  content:"SECURITY ARCHIVE";
+  position:absolute;
+  top:8px;
+  left:12px;
+  font-size:11px;
+  color:#ff6a6a;
+  letter-spacing:.15em;
+}
+
+video{
+  width:100%;
+  display:block;
+  filter:contrast(1.05) brightness(.92);
+}
+
+/* ===== START ===== */
+.start{
+  margin-top:22px;
+  text-align:center;
+}
+
+.start a{
+  display:inline-block;
+  padding:14px 48px;
+  border:1px solid #555;
+  color:#777;
+  text-decoration:none;
+  letter-spacing:.3em;
+  font-size:15px;
+  pointer-events:none;
+  opacity:.45;
+  transition:.3s;
+}
+
+.start a.enabled{
+  color:#fff;
+  border-color:#aaa;
+  pointer-events:auto;
+  opacity:1;
+}
+
+.start a.enabled:hover{
+  background:#111;
+}
+
+/* ===== スマホ ===== */
+@media(max-width:900px){
+  .wrapper{
+    grid-template-columns:1fr;
+  }
+  .info{
+    border-right:none;
+    border-bottom:1px solid #1f1f1f;
+  }
+  .stage{
+    padding:20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- 左 -->
+  <div class="info">
+    <h1>とあるホテルの秘密</h1>
+    <div class="meta">RIDDLE STORY 4</div>
+
+    <div class="section">
+      <h2>STORY</h2>
+      <p>
+        無事に、ひさきが死んだ原因となった転落事故の真犯人を見つけ出したあなた。<br>
+        しかし、取り調べで容疑者が言った。<br>
+        「このホテルの真相を暴いてみてください、そうすれば、ひさきの██について教えてあげましょう。」<br>
+        すべての謎を解き明かし、ホテルの真相に迫れ。
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>NOTICE</h2>
+      <ul>
+        <li>映像を最後まで再生してください。</li>
+        <li>音声、緊張を誘う演出があります。</li>
+        <li>LINEアプリをインストールしてください。</li>
+        <li>本ゲームで登場する団体名、人物、名所等はすべて架空のものです。</li>
+      </ul>
+    </div>
+
+    <div class="package">
+      <h2>PHYSICAL EDITION</h2>
+      <img src="package.png" alt="とあるホテルの秘密 パッケージ版">
+      <p>
+        本商品は、本ゲーム体験後に開封することをお勧めしています。<br>
+        クリア前に開けてしまうと、重大なネタバレを知ってしまう可能性がございます。
+      </p>
+
+      <!-- ★ 追加：購入ボタン ★ -->
+      <a class="buy-btn"
+         href="https://booth.pm/ja/items/7821674"
+         target="_blank"
+         rel="noopener">
+        パッケージ版を購入する
+      </a>
+
+      <div class="url">   https://booth.pm/ja/items/7821674
+      </div>
+    </div>
+  </div>
+
+  <!-- 右 -->
+  <div class="stage">
+    <div class="video-box">
+      <video id="openingVideo"
+        src="opening.mp4"
+        controls
+        playsinline
+        preload="auto">
+      </video>
+    </div>
+
+        <div class="start">
+      <a id="startBtn" href="https://lin.ee/eD5WGkV" target="_blank" rel="noopener">
+        GAME START
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const video = document.getElementById("openingVideo");
+const startBtn = document.getElementById("startBtn");
+
+video.addEventListener("ended", () => {
+  startBtn.classList.add("enabled");
+});
+</script>
+
+</body>
+</html>
